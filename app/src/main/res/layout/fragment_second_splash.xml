@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/second_splash"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_splash"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/img_second_splash"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bg_text"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/img_second_splash"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"/>
+
+    <ImageView
+        android:id="@+id/bg_text"
+        android:layout_width="0dp"
+        android:layout_height="375dp"
+        android:src="@drawable/rounded_splash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@id/bg_text"
+        app:layout_constraintEnd_toEndOf="@id/bg_text"
+        app:layout_constraintTop_toTopOf="@id/bg_text"
+        android:text="Cari &amp; Temukan"
+        android:fontFamily="@font/poppins_extra_bold"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Temukan tempat wisata favorit berdasarkan lokasi, rating, dan foto asli dari traveler lain. Liburan jadi lebih mudah!"
+        android:fontFamily="@font/plus_jakarta_sans_regular"
+        android:textColor="@color/black"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:textSize="14sp"
+        android:justificationMode="inter_word"
+        app:layout_constraintStart_toStartOf="@id/bg_text"
+        app:layout_constraintEnd_toEndOf="@id/bg_text"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:text="Next"
+        android:textSize="12sp"
+        android:backgroundTint="@color/black"
+        android:textAllCaps="false"
+        app:cornerRadius="35dp"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc"
+        app:layout_constraintStart_toStartOf="@id/bg_text"
+        app:layout_constraintEnd_toEndOf="@id/bg_text"/>
+
+    <ImageView
+        android:id="@+id/img_status_first"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toStartOf="@id/img_status_second"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:src="@drawable/corner_status"
+        app:layout_constraintTop_toBottomOf="@id/btn_next"
+        app:layout_constraintStart_toStartOf="@id/btn_next"/>
+
+    <ImageView
+        android:id="@+id/img_status_second"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="14dp"
+        android:src="@drawable/corner_status"
+        app:layout_constraintEnd_toStartOf="@id/img_status_third"
+        app:layout_constraintTop_toBottomOf="@id/btn_next"
+        app:layout_constraintStart_toEndOf="@id/img_status_first"/>
+
+    <ImageView
+        android:id="@+id/img_status_third"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/corner_status"
+        android:layout_marginStart="14dp"
+        app:layout_constraintEnd_toEndOf="@id/btn_next"
+        app:layout_constraintTop_toBottomOf="@id/btn_next"
+        app:layout_constraintStart_toEndOf="@id/img_status_second"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/blue_splash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.splash.SplashActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/img_healing_kuy"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/healingkuy_icon"
+        android:layout_marginTop="125dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/img_healing_kuy"
+        app:layout_constraintEnd_toEndOf="@id/img_healing_kuy"
+        app:layout_constraintTop_toBottomOf="@id/img_healing_kuy"
+        android:text="HealingKuy"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="32sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

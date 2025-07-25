@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="46dp"
+    android:background="@color/main_white"
+    tools:context=".ui.search.SearchFragment">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/sv_destinations"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_dialog"
+        android:drawableStart="@drawable/search_icon"
+        android:drawablePadding="16dp"
+        android:imeOptions="actionNone"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Temukan tujuan wisatamu"
+        android:fontFamily="@font/plus_jakarta_sans_medium" />
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sv_destinations"
+        android:layout_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/default_search"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_your_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category Untukmu"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/bg_main_category"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_your_category"
+                android:src="@drawable/bg_dialog"
+                android:tint="@color/white"
+                tools:ignore="UseAppTint" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_main_category"
+                android:layout_width="125dp"
+                android:layout_height="0dp"
+                tools:src="@drawable/ic_launcher_background"
+                android:scaleType="fitXY"
+                app:shapeAppearanceOverlay="@style/RoundedImage"
+                app:layout_constraintStart_toStartOf="@id/bg_main_category"
+                app:layout_constraintTop_toTopOf="@id/bg_main_category"
+                app:layout_constraintBottom_toBottomOf="@id/bg_main_category"/>
+
+            <TextView
+                android:id="@+id/tv_title_main_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alam"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="22sp"
+                android:layout_marginStart="14dp"
+                app:layout_constraintTop_toTopOf="@id/img_main_category"
+                app:layout_constraintBottom_toBottomOf="@id/img_main_category"
+                app:layout_constraintStart_toEndOf="@id/img_main_category"/>
+
+            <TextView
+                android:id="@+id/tv_other_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category Lain"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="20sp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/bg_main_category"
+                app:layout_constraintStart_toStartOf="@id/bg_main_category"/>
+
+            <ImageView
+                android:id="@+id/bg_first_category"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_other_category"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/bg_second_category"
+                android:src="@drawable/bg_dialog"
+                android:tint="@color/white"
+                tools:ignore="UseAppTint" />
+
+            <ImageView
+                android:id="@+id/bg_second_category"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="22dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_other_category"
+                app:layout_constraintStart_toEndOf="@id/bg_first_category"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/bg_dialog"
+                android:tint="@color/white"
+                tools:ignore="UseAppTint" />
+
+            <ImageView
+                android:id="@+id/bg_third_category"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/bg_first_category"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/bg_four_category"
+                android:src="@drawable/bg_dialog"
+                android:tint="@color/white"
+                tools:ignore="UseAppTint" />
+
+            <ImageView
+                android:id="@+id/bg_four_category"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="22dp"
+                app:layout_constraintTop_toBottomOf="@id/bg_first_category"
+                app:layout_constraintStart_toEndOf="@id/bg_third_category"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/bg_dialog"
+                android:tint="@color/white"
+                tools:ignore="UseAppTint" />
+
+            <ImageView
+                android:id="@+id/bg_five_category"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/bg_third_category"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/bg_six_category"
+                android:src="@drawable/bg_dialog"
+                android:tint="@color/white"
+                tools:ignore="UseAppTint" />
+
+            <ImageView
+                android:id="@+id/bg_six_category"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="22dp"
+                app:layout_constraintTop_toBottomOf="@id/bg_four_category"
+                app:layout_constraintStart_toEndOf="@id/bg_five_category"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/bg_dialog"
+                android:tint="@color/white"
+                tools:ignore="UseAppTint" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_first_category"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                tools:src="@drawable/ic_launcher_background"
+                android:scaleType="fitXY"
+                app:shapeAppearanceOverlay="@style/RoundedImage"
+                app:layout_constraintStart_toStartOf="@id/bg_first_category"
+                app:layout_constraintTop_toTopOf="@id/bg_first_category"
+                app:layout_constraintBottom_toBottomOf="@id/bg_first_category"/>
+
+            <TextView
+                android:id="@+id/tv_first_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alam"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="@id/img_first_category"
+                app:layout_constraintBottom_toBottomOf="@id/img_first_category"
+                app:layout_constraintStart_toEndOf="@id/img_first_category"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_second_category"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                tools:src="@drawable/ic_launcher_background"
+                android:scaleType="fitXY"
+                app:shapeAppearanceOverlay="@style/RoundedImage"
+                app:layout_constraintStart_toStartOf="@id/bg_second_category"
+                app:layout_constraintTop_toTopOf="@id/bg_second_category"
+                app:layout_constraintBottom_toBottomOf="@id/bg_second_category" />
+
+            <TextView
+                android:id="@+id/tv_second_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Budaya"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="@id/img_second_category"
+                app:layout_constraintBottom_toBottomOf="@id/img_second_category"
+                app:layout_constraintStart_toEndOf="@id/img_second_category" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_third_category"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                tools:src="@drawable/ic_launcher_background"
+                android:scaleType="fitXY"
+                app:shapeAppearanceOverlay="@style/RoundedImage"
+                app:layout_constraintStart_toStartOf="@id/bg_third_category"
+                app:layout_constraintTop_toTopOf="@id/bg_third_category"
+                app:layout_constraintBottom_toBottomOf="@id/bg_third_category" />
+
+            <TextView
+                android:id="@+id/tv_third_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Religi"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="@id/img_third_category"
+                app:layout_constraintBottom_toBottomOf="@id/img_third_category"
+                app:layout_constraintStart_toEndOf="@id/img_third_category" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_four_category"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                tools:src="@drawable/ic_launcher_background"
+                android:scaleType="fitXY"
+                app:shapeAppearanceOverlay="@style/RoundedImage"
+                app:layout_constraintStart_toStartOf="@id/bg_four_category"
+                app:layout_constraintTop_toTopOf="@id/bg_four_category"
+                app:layout_constraintBottom_toBottomOf="@id/bg_four_category" />
+
+            <TextView
+                android:id="@+id/tv_four_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sejarah"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="@id/img_four_category"
+                app:layout_constraintBottom_toBottomOf="@id/img_four_category"
+                app:layout_constraintStart_toEndOf="@id/img_four_category" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_five_category"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                tools:src="@drawable/ic_launcher_background"
+                android:scaleType="fitXY"
+                app:shapeAppearanceOverlay="@style/RoundedImage"
+                app:layout_constraintStart_toStartOf="@id/bg_five_category"
+                app:layout_constraintTop_toTopOf="@id/bg_five_category"
+                app:layout_constraintBottom_toBottomOf="@id/bg_five_category" />
+
+            <TextView
+                android:id="@+id/tv_five_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edukasi"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="@id/img_five_category"
+                app:layout_constraintBottom_toBottomOf="@id/img_five_category"
+                app:layout_constraintStart_toEndOf="@id/img_five_category" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_six_category"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                tools:src="@drawable/ic_launcher_background"
+                android:scaleType="fitXY"
+                app:shapeAppearanceOverlay="@style/RoundedImage"
+                app:layout_constraintStart_toStartOf="@id/bg_six_category"
+                app:layout_constraintTop_toTopOf="@id/bg_six_category"
+                app:layout_constraintBottom_toBottomOf="@id/bg_six_category" />
+
+            <TextView
+                android:id="@+id/tv_six_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pantai"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="@id/img_six_category"
+                app:layout_constraintBottom_toBottomOf="@id/img_six_category"
+                app:layout_constraintStart_toEndOf="@id/img_six_category" />
+
+
+            <TextView
+                android:id="@+id/tv_title_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kota"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="20sp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="@id/bg_five_category"
+                app:layout_constraintTop_toBottomOf="@id/bg_six_category"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_city"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="5dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/black"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
